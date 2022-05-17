@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorSecondary</color>
+    <color name="colorPrimaryDark">@color/md_indigo_900</color>
+    <color name="colorAccent">@color/colorSecondary</color>
+    <color name="colorSecondary">@color/md_indigo_400</color>
+    <color name="colorSecondaryDark">@color/md_indigo_900</color>
+    <color name="toolbarBackground">@color/md_white_1000</color>
+    <color name="splashScreenBackground">@color/appBackground</color>
+
+    <color name="textColorLight">@color/md_blue_grey_500</color>
+    <color name="textColor">@color/md_blue_grey_800</color>
+    <color name="textColorDark">#01023B</color>
+    <color name="textColorHint">@color/md_blue_grey_300</color>
+    <color name="textColorActionMenu">@color/md_white_1000</color>
+    <color name="textColorOnDark">@color/md_white_1000</color>
+    <color name="textColorRequied">@color/md_red_700</color>
+
+    <color name="appBackground">#F0F2FF</color>
+    <color name="cardBackground">#F0F2FF</color>
+    <color name="colorLight">@color/md_blue_grey_300</color>
+    <color name="calendarCurrentDayColor">@color/md_white_1000</color>
+    <color name="calendarMonthDayColor">@color/md_indigo_100</color>
+    <color name="calendarAnotherDayColor">@color/md_blue_grey_50</color>
+    <color name="calendarMonthDayTextColor">@color/textColorDark</color>
+    <color name="calendarAnotherDayTextColor">@color/textColorHint</color>
+</resources>

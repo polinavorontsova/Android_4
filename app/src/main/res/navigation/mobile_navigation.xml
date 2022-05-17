@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_calendar">
+
+    <fragment
+        android:id="@+id/nav_calendar"
+        android:name="com.ab.labs.planner.ui.calendar.CalendarFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/fragment_calendar">
+        <action
+            android:id="@+id/action_nav_calendar_to_nav_event"
+            app:destination="@id/nav_event" />
+        <action
+            android:id="@+id/action_nav_calendar_to_nav_new_event"
+            app:destination="@id/nav_new_event" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_event"
+        android:name="com.ab.labs.planner.ui.event.EventFragment"
+        android:label="@string/menu_event"
+        tools:layout="@layout/fragment_event" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_nav_event_to_nav_new_event"
+            app:destination="@id/nav_new_event" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_new_event"
+        android:name="com.ab.labs.planner.ui.newevent.NewEventFragment"
+        android:label="@string/menu_new_event"
+        tools:layout="@layout/fragment_new_event" >
+        <argument
+            android:name="id"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.ab.labs.planner.ui.notes.NotesFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_notes">
+        <action
+            android:id="@+id/action_nav_notes_to_nav_note"
+            app:destination="@id/nav_note" />
+        <action
+            android:id="@+id/action_nav_notes_to_nav_add_note"
+            app:destination="@id/nav_add_note" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_note"
+        android:name="com.ab.labs.planner.ui.note.NoteFragment"
+        android:label="@string/menu_note"
+        tools:layout="@layout/fragment_note">
+        <argument
+            android:name="id"
+            app:argType="long"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_nav_note_to_nav_add_note"
+            app:destination="@id/nav_add_note" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_note"
+        android:name="com.ab.labs.planner.ui.addnote.AddNoteFragment"
+        android:label="@string/label_add_note"
+        tools:layout="@layout/fragment_add_note">
+        <argument
+            android:name="id"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.ab.labs.planner.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
